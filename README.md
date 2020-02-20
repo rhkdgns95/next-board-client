@@ -4,10 +4,11 @@
 ## Todo
 - [x] init project.
 - [x] Create nextjs with typescript.
+- [x] Custom App, appProvider.
+- [] Custom Layout, Navigation.
 
 ### Install
 > yarn create next-app --example with-typescript <project_name>
-> 
 
 ### Todo Details
 
