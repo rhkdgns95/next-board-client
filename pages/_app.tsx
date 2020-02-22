@@ -1,6 +1,9 @@
 import App from "next/app";
+import "../styles/global-styles.css";
 import { NextRouter } from "next/router";
 import AppProvider from "./api/appProvider";
+import Navbar from "../components/Navbar";
+import Layout from "../components/Layout";
 
 interface INextPageContext {
     Component: React.FC<any>;
@@ -12,7 +15,10 @@ const MyApp = (props: INextPageContext) => {
     const { Component, pageProps } = props;
     return (
         <AppProvider>
-            <Component { ...pageProps }/>
+            <Layout>
+                <Navbar/>
+                <Component { ...pageProps }/>
+            </Layout>
         </AppProvider>
     );
 };

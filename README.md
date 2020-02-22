@@ -6,7 +6,7 @@
 - [x] Create nextjs with typescript.
 - [x] Custom App, appProvider.
 - [x] Custom Layout.
-- [] Navigation
+- [x] Navigation.
 
 ### Install
 > yarn create next-app --example with-typescript <project_name>

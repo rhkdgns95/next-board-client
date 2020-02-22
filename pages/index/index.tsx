@@ -1,19 +1,20 @@
-import { useAppContext } from "../api/appProvider";
 import { NextPage } from "next";
-import Layout from "../../components/Layout";
+import { useAppContext } from "../api/appProvider";
+import { useEffect } from "react";
 
 const Index: NextPage<any> = () => {
-    const { isLoggedIn, toggleLogin } = useAppContext();
-    
+    const { handlePageTitle } = useAppContext();
+
+    useEffect(() => {
+        handlePageTitle("Main Page");
+    }, []);
+
     return (
-        <Layout title={"Next Board | Main Page"}>
-            <div>
+        <div className={"container"}>
+            <div className={"wrapper"}>
                 <h1>Index</h1>
-                { isLoggedIn ? "Login Success" : "Login Please"}
-                <button onClick={ () => toggleLogin() }>Login</button>
             </div>
-        </Layout>
-        
+        </div>
     );
 };
 

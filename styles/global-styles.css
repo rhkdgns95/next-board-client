@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+footer {
+    padding: 20px 0;
+    border-top: 1px solid black;
+    text-align: center;
+}
+
+.container {
+    padding: 20px 0;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.nav {
+    padding: 7px 3px;
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.nav button {
+    margin-left: auto;
+    padding: 8px 24.5px;
+    background-color: green;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 0;
+}
+
+.post-link-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post-link-item {
+    position: relative;
+    color: black;
+    margin-right: 15px;
+    transition: .3s;
+}
+.post-link-item:hover {
+    color: green;
+}
+.post-link-item.active {
+    color: green;
+}
+.post-link-item.active::after {
+    width: 100%;
+}
+
+.post-link-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: .2s;
+    background-color: green;
+    height: 3px;
+}

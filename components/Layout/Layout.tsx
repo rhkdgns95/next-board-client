@@ -1,17 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
+import { useAppContext } from '../../pages/api/appProvider';
 
 interface IProps {
-    title?: string;
 }
+
 const Layout: React.FC<IProps> = ({
     children,
-    title
 }) => {
+    const { pageTitle } = useAppContext();
     return (
         <>
             <Head>
-                <title>{ title }</title>
+                <title>{ pageTitle }</title>
             </Head>
             <header>
                  - Header -
