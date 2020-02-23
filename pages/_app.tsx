@@ -27,7 +27,10 @@ MyApp.getInitialProps = async (appContext: any) => {
     // calls page's `getInitialProps` and fills `appProps.pageProps`
     // console.log("_app.js getInitialProps appContext: ", appContext);
     const appProps = await App.getInitialProps(appContext);
-
+    console.log("MyApp.getInitialProps");
+    if(appContext.ctx.req) {
+        // console.log("appContext.ctx.req: ", appContext.ctx.req.headers);
+    }
   return { ...appProps };
 }
 
