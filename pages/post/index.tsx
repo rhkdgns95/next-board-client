@@ -61,8 +61,12 @@ const Post: NextPage<IProps> = ({
     );
 }
 
-Post.getInitialProps = async () => {
-    console.log("Post.getInitialProps: ", );
+Post.getInitialProps = async ({ req }) => {
+    console.log("Post.getInitialProps: hi");
+    if(req) {
+        // console.log("Post.getInitialProps: ", req.headers['cookie']);
+    }
+    
     return {
         posts: Posts
     };

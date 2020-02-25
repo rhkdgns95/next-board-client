@@ -21,7 +21,7 @@ const useAppContext = () => useContext(AppContext);
 const useFetch = (): { value: IContext } => {
     const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
     const [pageTitle, setPageTitle] = useState<string>("Next Board");
-
+    
     const handlePageTitle = (newTitle: string) => {
         setPageTitle(`Next Board | ${newTitle}`);
     }
